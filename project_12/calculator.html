@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/calculator.css">
+  </head>
+  <body>
+    <header id="blog-header">
+        <!-- <figure class="logo-figure">
+          <i class="fab fa-monero logo"></i> 
+    
+    
+        </figure> -->
+    
+                 <img id="logo"src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAgVBMVEUAAAD////e3t6Pj4/Q0NDW1tb7+/unp6e1tbXj4+Otra319fX4+Pjs7Ozv7+/p6emGhoY2NjZzc3MoKCgZGRmdnZ1lZWW+vr5XV1cgICAtLS29vb1tbW1AQEDExMR+fn5PT0+goKANDQ2VlZUzMzNISEhfX19UVFSKioqAgIA8PDzuZd6pAAAH1UlEQVR4nO2caXPqOgyGkxIg7LQsByiFAKUH+P8/8JIFa3NCyrmTODN6PkEMGb3YsWxJxvMURVEURVEURVEURVEURVEURVEURVEURVEURVEURVEURVEURVEURVEUxSXCIGM3l43LdtbY/pBtjy8Gss0pev6DH9kYmsZWQdufCsz8B96MoQfZOChQODJtgwrM/AdA4Zto+/bzFZ6hzV9VYumrgMLOO287FShsIYWLakx9EVDoixmjXaAQtVl63yWQwh1v8/MVrgeocbipyNiXQApHR9r0UaBw62P2lZn7Akihf6ZNYYHCPlH4WZm5L4AVMn8xKlDYIwonlZn7Alhhm7Rgf8AVkrY7fyu0+LdghT55ELE/4AqnTOGpSpN/CVFI/AX2B1xhwBTS3ncLohDPGMQfMIW07c7wu1qrfwNROEQN1B9QhT8+Z1ut1b+BKPRv0ED9AVVI23jvOwZViFaY1B+0Cr4U47C/oMbCjMH8AVG4EQJ9/6tyy8vCusNcvxQoBF8BM467/oIpNP6C+QOicAe6zKugetNLwhSG2WXuD4hCc3XsTWTvuwZT+IhIcH+AFa7M1Z33aV4v67C+DHxajNLL3B9ghdA2RTus0HJzJ+AKT/bLWCGMzJu3GcKIdRQuJfUXwh8ghWtzcUK+7+pGnysczOKrzFcQheAruvd3C977ziGWJ8kKc8evIoXQFk8uMO246i+EwmTG4Bexwo65mLwd0rfuIRTGD9eKX0QKl+ZaGpsDf+Fo/kIuoiPb3gEUHsy1S/J+b97361HwDKmwhf2BVAh7jixZZd6PapLwBKkwQP5AKryZx3Ai7nD2Tgv3NvtS4eDI40xY4VUMyoO5crkvcYZ9Sx6yVqRC/6/wFUghtEXZlRvq/dl9Zh04NuNYFIY8zoQUHiFMHD6A3p+nt3NryjEKJ2OpC+Q/FMoYFGabJeREjqdOjIigLS2GDe5D4aFQYd+L0hcuBaZAYUtaPBMKLYMa0TOJcYeSpsbkdiQMnoCvyxS+d8SHCGeTsIrqFEUAhZ54EPtC4Qf/CAO2xO6EF5FC4SR+jlzhnycKA1jiOJM1RQqFo/fmTOFRLuco47W5oTOdiBR+s4cs8KAP05mDpw0lK+/weGmpQKoFpJAF8uN+M6/T6d9Y73co5nofljiu+H2sEAQkvKNNRlpQAi6TBvEhrPMGhVSuDFOskC5Y7s4NIt+JuTBoufXgJmdmS9xZV6/GBlbokQcxDmfABj6u08gPjnZNCwqhOlIMRhQSfxHHmS7I8qKABQ5trPM+VBNEIfYXSVgRJs84kmaCTkM+AI9mtdCBp9URj0gUwoOWhYbnYPm3907bCJCqiryDwwqxv0jjTCiRVhj8xWHixwLXxVGKg2xR0gyTywj5ikjcBjb6PbNLdmSmMb2WeLy/xtDMH8xQlte8shUFw3punnV8x5FExqmbkY7Kfvauf83a0Vo77GdMLffB/mKf+zu4CAp/F2YIsb9II46u5jEEKLhRWBZkPjXMHm6HtvnFQOdYKsER4C9+vIN9OnIVVJXBq4gxEOZZJAtcZ3PCki9Q6PfyA9qwW74v2cclBulxvS74wSqliyRO8geqiRUP32N/UXTH+fbzLZmNBkE3+r/NfQUcuxjkVpXAamF/X+IUTLxfNKjeO9Wf6bhhg5LsvQ3YXcb+Itfdz2VycmxzsNVCg4iTHK8BE9J9nZp3q9WI64sJat8tL6hBbalxc0STbv6KdO/bGdde28iH1uhADmfc+vflAPYXOVz9PIa1SwyFTZ3d4SP6Xm/O1zCeikL0uOYdhFqKmwBpIU+ddAusSyxE+5ScxQ+UiNmov95f1EkxNqif7ZtffoaBUX9RVWTJoRIDYRBaD86SGXnYPlxafRqDrn2cevNPv4AAbZcntvUYzj32s3G8wv3qQpR8yQL/BLzTOsvvop3mEOU0TuQODjDNH6pP/AUaABG+jnLPjkTn9nn9GHqQRpYbfJSZu9AWiOc5U+Hw1bfUowy6G7xGFw8ijsZR0JHxigSU4dzajcG7Dd+66ZNV4C9gJhVeAWYbR8JzD+bn7X56mV63MK2ADFFvAktbcRwTPK0jQeQCZqZfRSzRdO9AdBQ8vg2IXoG/4As3o3Asd0rmS3l7T4c45XaH2Z0M5KLVfMnZQxsADDi+vwC3J+MgJjPrUrVYHuBH2ONmghyBLNJoUh8if8FO9yfVDJOutQbFfMeFlekz4Pgwn02D3TSnRBoisg2YS3G1Q+n9HqRXr88/XD+oZLjsfg8yeLUHa8qAgqtlZ0bnj90w0J623CIMBmlDUo6QKS/51zywIZH/t+UmqO6ozDEatMl3JRf1DJKOe/5pmHwbMkg9WuPYe5KROKKIgbOHpSU4qjYuLqtB85LbfxlGOZMix4KFyhwf8mhQF/IU01teQfQKB+6cCUOV40Ak+oHtj6TWJMDs8p/4WOG5ql6L5bJX7PCDI7HSXyAzAL1wGm3W8/nstj3s+OGbJuybODJfX0DDHsIMy1GxPJrj6yk/1qoEC47/i20B62fnpFIasbPPY/m8G8euHB96lVZh8r4RQeCnXApOvIX1V3z9L/zYjofHFW1N2RCWYbloj5GXH0z+TBsRdvodX8uPy2mxaF0/VvWXXSiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKoiiKojSY/wBoHFBp+onwUgAAAABJRU5ErkJggg==" alt="Mohammad Azam's Logo" height="50px">
+        <i class="fas fa-bars fa-4x" id="menu-icon"></i>
+        <nav aria-label="Main Menu" id="menu" class="hidden">
+          <ul id="menubar" role="menubar" aria-label="Main Menu">
+            <li role="none">
+              <a href="index.html" class="nav-link active" role="menuitem">Home</a>
+            </li>
+            <li role="none">
+              <a href="about-us.html" class="nav-link" role="menuitem">About</a>
+            </li>
+            <li role="none">
+              <a href="trivia.html" class="nav-link active" role="menuitem">Quiz_Game</a>
+            </li>
+            <li role="none">
+              <a href="contact-us.html" class="nav-link" role="menuitem">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header bg-dark text-white">
+              <h3 class="card-title mb-0">Calculator</h3>
+            </div>
+            <div class="card-body">
+              <div class="row mb-2">
+                <div class="col-12">
+                  <div class="text-right">
+                    <span id="previous-operand"></span>
+                    <span id="current-operand"></span>
+                  </div>
+                  <input type="text" class="form-control" id="display" readonly>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-9">
+                  <div class="row">
+                    <div class="col-4">
+                      <button class="btn btn-secondary btn-block" id="clear">
+                        C
+                      </button>
+                    </div>
+                    <div class="col-4">
+                      <button class="btn btn-secondary btn-block" id="sign">
+                        +/-
+                      </button>
+                    </div>
+                    <div class="col-4">
+                      <button class="btn btn-secondary btn-block" id="percent">
+                        %
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-4">
+                      <button class="btn btn-light btn-block" id="seven">
+                        7
+                      </button>
+                    </div>
+                    <div class="col-4">
+                      <button class="btn btn-light btn-block" id="eight">
+                        8
+                      </button>
+                    </div>
+                    <div class="col-4">
+                      <button class="btn btn-light btn-block" id="nine">
+                        9
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-4">
+                      <button class="btn btn-light btn-block" id="four">
+                        4
+                      </button>
+                    </div>
+                    <div class="col-4">
+                      <button class="btn btn-light btn-block" id="five">
+                        5
+                      </button>
+                    </div>
+                    <div class="col-4">
+                      <button class="btn btn-light btn-block" id="six">
+                        6
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col-4">
+                      <button class="btn btn-light btn-block" id="one">
+                        1
+                      </button>
+                    </div>
+                    <div class="col-4">
+                      <button class="btn btn-light btn-block" id="two">
+                        2
+                      </button>
+                    </div>
+                    <div class="col-4">
+                      <button class="btn btn-light btn-block" id="three">
+                        3
+                      </button>
+                    </div>
+                  </div>
+                  <div id="zero-row" class="row">
+                    <div class="col-8">
+                      <button class="btn btn-light btn-block" id="zero">
+                        0
+                      </button>
+                    </div>
+                    <div class="col-4">
+                      <button class="btn btn-light btn-block" id="decimal">
+                        .
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="btn-group-vertical" role="group">
+                    <button class="btn btn-warning btn-block" id="divide">
+                      ÷
+                    </button>
+                    <button class="btn btn-warning btn-block" id="multiply">
+                      ×
+                    </button>
+                    <button class="btn btn-warning btn-block" id="subtract">
+                      -
+                    </button>
+                    <button class="btn btn-warning btn-block" id="add">
+                      +
+                    </button>
+                    <button class="btn btn-warning btn-block" id="equals">
+                      =
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- age calculator section starts here  -->
+
+    <div class="container1">
+      <h1>Age Calculator</h1>
+      <form>
+        <label for="birthdate">Enter your birthdate:</label>
+        <small>Use the format shown below</small>
+        <input type="text" id="birthdate" name="birthdate" placeholder="MM/DD/YYYY" required>
+        <div class="button-group">
+          <button type="submit" class="submit">CALCULATE</button>
+          <button type="reset" class="reset">RESET</button>
+        </div>
+      </form>
+      <p id="age"></p>
+    </div>
+
+
+     <!-- age calculator section ends  here  -->
+     
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script src="./javascript/calculator.js"></script>
+  </body>
+</html>

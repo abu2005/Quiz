@@ -1,0 +1,272 @@
+ body {
+  font-family: 'Arial', sans-serif;
+  background-image: url("/images/nature.jpg");
+   background-color: #897171; 
+
+  align-items: center;
+  justify-content: center;
+   height: 100vh; 
+
+  height: 500px;
+  margin: 0;
+} 
+
+body{
+
+  font-family: 'Arial', sans-serif;
+  background: #001e4d;
+  background-image: url("/images/nature.jpg");
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* header starts here  */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(101, 136, 73);
+  color: #fff;
+  padding: auto;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  min-height: 5vh;
+}
+#logo{
+  border: 1px solid #fff;
+  font-size: 4rem;
+  width: auto;
+}
+
+/* .logo-figure {
+  border: 1px solid #fff;
+}
+.logo {
+  font-size: 4rem;
+} */
+#menu-icon {
+  display: none;
+}
+nav li {
+  display: inline-block;
+  margin-right: 2rem;
+  padding: 1rem;
+  transition: all 0.4s;
+}
+nav li:last-child {
+  margin-right: 0;
+}
+nav li:hover {
+  background-color: #1913d5;
+  border-radius: 0.6rem;
+}
+.nav-link {
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+/* header ends here  */
+
+#quiz-container {
+  background-color: #ad7898;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 900px;
+  height: 350px;
+  text-align: center;
+  margin: 50px;
+
+  border: 5px solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.btn {
+  background-color: #34b4db;
+  color: #fff;
+  padding: 9px 20px;
+  border: none;
+font-size: 15px;
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #62717b;
+}
+
+#result-container {
+  margin-top: 20px;
+  font-weight: bold;
+ max-width: 4000px;
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+
+  
+    flex-direction: column;
+  
+}
+
+
+
+/* footer starts here  */
+.footer {
+  background-color: rgb(224, 187, 187);
+  padding: ;
+  position: fixed;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.copyright-text {
+  font-size: 1.5rem;
+  color: #fff;
+}
+.footer-icon {
+  font-size: 1.5rem;
+}
+/* footer ends here  */
+
+/* responsive starts here  */
+@media (max-width: 992px) {
+  #blog-banner-section {
+    flex-direction: column;
+  }
+  #blog-banner-section article {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+  .card-container {
+    width: 50%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 55.5%;
+  }
+  #blog-banner-section article {
+    width: 80%;
+  }
+  .card-container {
+    width: 80%;
+  }
+  #archives {
+    min-height: auto;
+  }
+  .blog-post {
+    flex-direction: column;
+    margin-bottom: 3rem;
+    width: 80%;
+  }
+  #contact-section {
+    min-height: auto;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 48.5%;
+  }
+  header {
+    flex-direction: column;
+  }
+  #menu-icon {
+    display: block;
+    margin-top: 1.5rem;
+    cursor: pointer;
+  }
+  .hidden {
+    display: none;
+  }
+  nav ul {
+    padding-left: 2.5rem;
+  }
+  nav li {
+    display: block;
+    margin-right: 0;
+    margin: 1rem 0;
+  }
+  #blog-banner-section {
+    min-height: auto;
+  }
+  #blog-banner-section article {
+    width: 90%;
+  }
+  .banner-img {
+    max-width: 100%;
+  }
+  #blog-about {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-container {
+    width: 90%;
+  }
+  .archives-container-lists {
+    flex-wrap: wrap;
+  }
+  .blog-post {
+    width: 90%;
+  }
+  #contact-form {
+    width: 90%;
+  }
+  .form-control {
+    flex-direction: column;
+  }
+  input,
+  textarea {
+    max-width: 100%;
+  }
+  .form-control label {
+    margin-bottom: 0.5rem;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+  #menubar2 {
+    display: flex;
+  }
+}
+@media (max-width: 400px) {
+}
+/* responsive ends here  */

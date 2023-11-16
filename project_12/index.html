@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This is my personal website homepage - it shows the menu and connect to other page">
+    <title>Project-Homepage</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italianno&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/png" href="
+    data:image/png;base64,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" size="16x16px">
+
+
+  </head>
+  <body>
+    <!-- header starts here  -->
+    <header id="blog-header">
+      <!-- <figure class="logo-figure">
+        <i class="fab fa-monero logo"></i> 
+
+ 
+      </figure> -->
+
+               <img id="logo"src="data:image/png;base64,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" alt="Mohammad Azam's Logo" height="50px">
+      <i class="fas fa-bars fa-4x" id="menu-icon"></i>
+      <nav aria-label="Main Menu" id="menu" class="hidden">
+        <ul id="menubar" role="menubar" aria-label="Main Menu">
+          <li role="none">
+            <a href="index.html" class="nav-link active" role="menuitem">Home</a>
+          </li>
+          <li role="none">
+            <a href="about-us.html" class="nav-link" role="menuitem">About</a>
+          </li>
+          <li role="none">
+            <a href="calculator.html" class="nav-link active" role="menuitem">Calculator</a>
+          </li>
+
+          <li role="none">
+            <a href="quiz.html" class="nav-link active" role="menuitem">Quiz</a>
+          </li>
+          <li role="none">
+            <a href="project.html" class="nav-link" role="menuitem">Projects</a>
+          </li>
+          <li>
+            <a href="images.html" class="nav-link"  role="menuitem">Images</a>
+          </li>
+          <li role="none">
+            <a href="contact-us.html" class="nav-link" role="menuitem">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- header ends here  -->
+
+    <!-- main starts here  -->
+    <main>
+      <!-- banner section starts here  -->
+      <section id="blog-banner-section">
+        <article>
+          <h1 class="banner-heading">Web Development Journey </h1>
+          <p class="banner-description text-justify">
+            I believe Web development is always fun. We should learn web
+            development for a bright career. I have started learning web
+            development 2 years ago and still learning. I started with HTML,
+            CSS, JS and still learning. I must say web development
+            demands more patience and consistency.
+          </p>
+        </article>
+        <aside>
+          <img
+            src="./images/Mohammad Azam.jpg"
+            alt="cover photo of Mohammad Azam"
+            class="banner-img"
+          />
+        </aside>
+      </section>
+      <!-- banner section ends here  -->
+
+      <!-- about-me section starts here  -->
+      <section id="blog-about" class="section-center">
+        <h2 class="section-heading text-white">About Me</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3 class="card-header">Purpose of this site</h3>
+            <p class="card-description">
+              This page is to showcase what I have developed for html skills so far using some CSS and bootstrap.
+              Hope It will help other to start developing from beginning.After I came in USA start to learn various thing in It.Hopefully I will get job in IT sector soon.</p>
+            <button type="submit" class="card-btn btn">Read More</button>
+          </div>
+          <div class="card">
+            <h3 class="card-header">About myself:</h3>
+            <p class="card-description">
+              I am Mohammad Gausul Azam.Basically I am from Bangladesh.Right Now I am in Buffalo,NY,USA.Completed My masters degree in Chemistry from Bangladesh National University. 
+              But always have interest in IT sector.
+            </p>
+            <button type="submit" class="card-btn btn">Read More</button>
+          </div>
+          <div class="card">
+            <h3 class="card-header">Development Journey</h3>
+            <p class="card-description">
+            
+    After graduation in Chemistry I focus again in IT sector. First start as a freelancer (Web research and Lead generation Expert).
+After working with amazon get chance to drive in deeper so I start another Journey in Software Developement Course with correlation-one. 
+            </p>
+            <button type="submit" class="card-btn btn">Read More</button>
+          </div>
+        </div>
+      </section>
+      <!-- about-me section ends here  -->
+
+      <!-- archives section starts here  -->
+      <section id="archives" class="section-center">
+        <h2 class="section-heading">Archives</h2>
+        <div class="archives-container">
+          <ul class="archives-container-lists">
+            <li class="archives-container-list">
+              <img src="./images/html.jpg" alt="image1" class="archives-img" />
+            </li>
+            
+            <li class="archives-container-list">
+              <img src="./images/css.jpg" alt="image1" class="archives-img" />
+            </li>
+            <li class="archives-container-list">
+              <img src="./images/js.jpg" alt="image1" class="archives-img" />
+            </li>
+            <li class="archives-container-list">
+              <img src="./images/bootstrap.jpg" alt="image1" class="archives-img" />
+            </li>
+            <li class="archives-container-list">
+              <img src="./images/github.jpg" alt="image1" class="archives-img" />
+            </li>
+
+
+           
+
+
+          </ul>
+        </div>
+      </section>
+      <!-- archives section ends here  -->
+
+      <!-- blog-posts section starts here  -->
+      <section id="blog-posts" class="section-center">
+        <h2 class="section-heading blog-posts-heading">Desired Job</h2>
+        <div class="blog-post">
+          <aside class="blog-post-aside">
+            <img src="./images/html_css_js.jpg" alt="laptop" class="blog-img" />
+          </aside>
+          <article class="blog-content">
+            <h2 class="blog-heading">Front End Web Development</h2>
+            <h3 class="blog-sub-heading">HTML,CSS,Java Script</h3>
+            <p class="blog-description">
+              The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.
+               It defines the meaning and structure of web content. 
+              It is often assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+            </p>
+            <button type="submit" class="btn blog-btn">Learn More</button>
+          </article>
+        </div>
+
+        <div class="blog-post">
+          <aside class="blog-post-aside">
+            <img src="./images/agile.jpg" alt="laptop" class="blog-img" />
+          </aside>
+          <article class="blog-content">
+            <h2 class="blog-heading">Software Quality Analyst</h2>
+            <h3 class="blog-sub-heading">Project Master</h3>
+            <p class="blog-description">
+              In systems engineering, information systems and software engineering, the Software Development Life Cycle (SDLC), 
+              also referred to as the application development life cycle, is a process for planning, creating, testing, and deploying an information system.
+              The SDLC concept applies to a range of hardware and software configurations, as a system can be composed of hardware only, software only, 
+              or a combination of both.There are usually six stages in this cycle: 
+              requirement analysis, design, development and testing, implementation, documentation, and evaluation.
+            </p>
+            <button type="submit" class="btn blog-btn">Learn More</button>
+          </article>
+        </div>
+
+        <div class="blog-post">
+          <aside class="blog-post-aside">
+            <img src="./images/testing.jpg" alt="laptop" class="blog-img" />
+          </aside>
+          <article class="blog-content">
+            <h2 class="blog-heading">Software Testing</h2>
+            <h3 class="blog-sub-heading">Manual,Auto,Performance,API Testing.</h3>
+            <p class="blog-description">
+              Software testing is the act of examining the artifacts and the behavior of the software under test by validation and verification. 
+              Software testing can also provide an objective, 
+              independent view of the software to allow the business to appreciate and understand the risks of software implementation.
+            </p>
+            <button type="submit" class="btn blog-btn">Learn More</button>
+          </article>
+        </div>
+      </section>
+      <!-- blog-posts section ends here  -->
+      <!-- contact section starts here  -->
+      <section id="contact-section" class="section-center">
+        <h2 class="section-heading blog-posts-heading text-white">
+          Contact Me
+        </h2>
+        <form action="" id="contact-form">
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" id="name" required autocomplete="name" />
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" id="email" required autocomplete="email" />
+          </div>
+          <div class="form-control">
+            <label for="mesage">Message</label>
+            <textarea name="message" id="message"></textarea>
+          </div>
+          <div class="form-control form-btn-field">
+            <button type="submit" class="btn contact-btn">Submit</button>
+          </div>
+        </form>
+      </section>
+      <!-- contact section ends here  -->
+    </main>
+    <!-- main ends here  -->
+
+    <!-- footer section starts here  -->
+    <footer>
+      <p class="copyright-text">
+        Copyright &copy; Mohammad Gausul Azam. All rights reserved.
+      </p>
+      <nav aria-label="Footer Menu">
+        <ul role="menubar2" id="menubar2" aria-label="Footer Menu">
+          <li role="none">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              class="nav-link"
+              role="menuitem"
+            >
+              <i class="fab fa-facebook footer-icon"></i>
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="https://www.youtube.com"
+              target="_blank"
+              class="nav-link"
+              role="menuitem"
+            >
+              <i class="fab fa-youtube footer-icon"></i>
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="https://github.com/"
+              target="_blank"
+              class="nav-link"
+              role="menuitem"
+            >
+              <i class="fab fa-github footer-icon"></i>
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              class="nav-link"
+              role="menuitem"
+            >
+              <i class="fab fa-linkedin footer-icon"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+    <!-- footer section ends here  -->
+
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
