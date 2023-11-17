@@ -1,2 +1,2 @@
-# Quiz
-Project_12_Quiz_game
+# Project_12_Quiz_Game
+Project_12_Quiz_Game
